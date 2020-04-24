@@ -26,6 +26,10 @@ class YoloNeuralNetwork : public NeuralNetwork<cv::dnn::Net, cv::Mat>
     std::vector<std::string> getLayerNames() override;
 
     std::vector<cv::Mat> processInputImg(std::string&& inputImagePath) override;
+
+    /**
+     * Process input image and generate the output classifications as a vector
+     */
     std::vector<cv::Mat> processInputImg(const cv::Mat& inputImage);
 
     /**
